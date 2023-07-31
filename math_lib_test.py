@@ -1,5 +1,5 @@
 import unittest
-from math_lib import add, sub, multi, div, pow2
+from math_lib import add, sub, multi, div, pow
 
 class TestMathFunctions(unittest.TestCase):
     def test_add(self):
@@ -18,13 +18,12 @@ class TestMathFunctions(unittest.TestCase):
         result = div(8823, 3)
         self.assertAlmostEqual(result, 2941, places=2)
 
-    def test_pow2(self):
-        result = pow2(2, 6)
+    def test_pow(self):
+        result = pow(2, 6)
         self.assertEqual(result, 64)
 
-        result = pow2(64, 8)
+        result = pow(64, 8)
         self.assertEqual(result, 281474976710656)
-
 
 if __name__ == '__main__':
     unittest.main()
